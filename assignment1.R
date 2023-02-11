@@ -67,18 +67,15 @@ filter(housesales, city == "Dallas", month == 6)
 # 8) Build on what we've done above. Now that we have June numbers for Dallas for every year,
 # arrange the results by sales from highest-to-lowest to show what year had the highest June sales.
 
-
-
-
+arrange(filter(housesales, city == "Dallas", month == 6), desc(sales))
 
 
 # 9) Now do the same as Question 8, but this time instead of Dallas, show results for Corpus Christi
 
-
-
-
+arrange(filter(housesales, city == "Corpus Christi", month == 6), desc(sales))
 
 
 # 10) Finally, using the Corpus Christi code from Question 9, instead of June
 # use the month of February (2) instead.
 
+arrange(filter(housesales, city == "Corpus Christi", month == 2), desc(sales))
