@@ -61,8 +61,7 @@ arrange(filter(housesales, city == "Dallas", year == 2010), desc(sales))
 #
 # Filter for the city is Dallas, and the month is June (the number 6). 
 
-
-
+filter(housesales, city == "Dallas", month == 6)
 
 
 # 8) Build on what we've done above. Now that we have June numbers for Dallas for every year,
