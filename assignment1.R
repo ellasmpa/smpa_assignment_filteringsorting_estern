@@ -24,44 +24,33 @@ View(housesales)
 # 1) The column "year" indicates the year. Filter to return only results from 2015. 
 # (note that because the column is numeric, you wouldn't use quotes as with text when setting your filter value)
 
-
-
-
+filter(housesales, year == 2015)
 
 # 2) Similar to the above question, filter results from 2010 onward, so 2010-2015.
 
-
-
-
+filter(housesales, year >= 2010, year <= 2015)
 
 # 3) The "city" column contains the relevant city. Filter to return only results for Houston
 # (note, remember R is case sensitive)
 
-
-
+filter(housesales, city == "Houston")
 
 
 # 4) Filter for only where the city is Houston as above, and now also filter for only 
 # the year 2010. The results should give you 12 records, one for each month in 2010 for Houston.
 
-
-
-
+filter(housesales, city == "Houston", year == 2010)
 
 # 5) Build on what you've done above. Filter for only where the city is Houston as above, 
 # and the year is 2010. Now add a sort using arrange() to sort the results based on the number
 # of home sales (the "sales" column) from most to least.
 
-
-
-
+arrange(filter(housesales, city == "Houston", year == 2010), desc(sales))
 
 # 6) Piggyback on what you've done above. 
 # Do the same as #5, only this time instead of Houston return records for Dallas
 
-
-
-
+arrange(filter(housesales, city == "Dallas", year == 2010), desc(sales))
 
 # 7) Sometimes metrics like home sales have a seasonal quality to them, much like 
 # retail sales. There are times of year that are naturally more active, and others where
